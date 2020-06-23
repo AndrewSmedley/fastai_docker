@@ -13,6 +13,6 @@ then
     docker start -a fastai-container
 else
     echo "No existing container found. Creating one..."
-    docker run -ti -p 8888:8888 --runtime=nvidia --shm-size="8G" \
+    docker run --gpus all -ti -p 8888:8888 --shm-size="8G" \
     -v $(pwd):/workspace/mydata --name fastai-container fastai-image
 fi 
