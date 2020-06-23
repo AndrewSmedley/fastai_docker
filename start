@@ -3,7 +3,7 @@
 # check if image is already built, if not build it
 if ! docker images | grep -q fastai-image; then
     echo "No image found. Building new image..."
-    docker build -t fastai-image https://github.com/wAuner/fastai_docker.git
+    docker build -t fastai-image https://github.com/AndrewSmedley/fastai_docker.git
 fi
 
 # check if a container already exists and if so, use it
